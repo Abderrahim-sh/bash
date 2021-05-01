@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+# macgen Generate random mac address
+# abderra7imsridi1997@gmail.com
+a=( 0 1 2 3 4 5 6 7 8 9 a b c d e f )
+i=0
+
+while (($i<${1:-1} ))
+do
+	printf "%s%s:%s%s:%s%s:%s%s:%s%s:%s%s\n" \
+	${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]}\
+	${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]} ${a[RANDOM%16]};
+	((i++));
+
+
+done
