@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+if [ "$(id -u)" -eq 0 ]; then
+	ip link set dev $1 down
+	ip link set dev $1 address $(macgen)
+	ip link set dev $1 up
+fi
